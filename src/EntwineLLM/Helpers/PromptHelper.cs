@@ -38,7 +38,7 @@ namespace EntwineLlm.Helpers
         {
             return prompt
                 .EscapeJsonString()
-                .ReduceMultipleSpaces();
+                .ReduceMultipleSpaces(); // TODO only trim start and end of line
         }
 
         private string ReplacePlaceholders(string prompt, string model, string code, string manualRequest = "")

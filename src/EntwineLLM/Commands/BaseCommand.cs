@@ -44,8 +44,8 @@ namespace EntwineLlm.Commands
 
             if (string.IsNullOrWhiteSpace(textSelection.Text))
             {
-                textSelection.SelectLine();
-                return textSelection.Text.Trim();
+                textSelection.SelectLine(); //TODO this selectes sometimes whole file and sometimes only one line
+                //return textSelection.Text.Trim(); this line prevents followed optimization
             }
 
             var selectedLines = textSelection.Text
